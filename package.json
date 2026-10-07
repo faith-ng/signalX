@@ -1,5 +1,5 @@
 {
-  "name": "vatix-contract",
+  "name": "SignalX-contract",
   "private": true,
   "scripts": {
     "dev": "pnpm --filter web dev",

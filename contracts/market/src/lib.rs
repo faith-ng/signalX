@@ -1,4 +1,4 @@
-//! Vatix market contract.
+//! SignalX market contract.
 //!
 //! Storage keys are centralized in [`StorageKey`] so that every persisted
 //! market/position/settlement/fee/oracle entry has a stable, collision-free

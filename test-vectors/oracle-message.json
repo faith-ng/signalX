@@ -1,6 +1,6 @@
 {
   "description": "Canonical oracle message V2: keccak256(domain_separator || network_passphrase_hash || market_id_be || outcome_byte || valid_until_be || epoch_be)",
-  "domain_separator": "VATIX_ORACLE_V2",
+  "domain_separator": "SIGNALX_ORACLE_V2",
   "network_passphrase_hash_hex": "9999999999999999999999999999999999999999999999999999999999999999",
   "market_id": 1,
   "outcome": "YES",

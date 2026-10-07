@@ -1,6 +1,6 @@
 # Authorization Table (AUTH_TABLE)
 
-This document defines the authorization model for all entry points in the Vatix market contract.
+This document defines the authorization model for all entry points in the SignalX market contract.
 
 ## Authorization Matrix
 
@@ -102,7 +102,7 @@ Event indexers use these to reconstruct user activity and market state.
 
 ## Cross-Contract Authority
 
-When other Vatix contracts call the market contract, they should:
+When other SignalX contracts call the market contract, they should:
 
 1. **Outcome Token Contract** (minting):
    - Calls internal settlement logic (not public entry point)

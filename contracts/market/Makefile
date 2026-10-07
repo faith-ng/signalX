@@ -73,7 +73,7 @@ test: build
 
 # Compile the contract to its deployable WASM binary using the canonical command.
 # This is the ONLY way contracts should be built for deployment.
-# Output: target/wasm32v1-none/release/vatix_market_contract.wasm
+# Output: target/wasm32v1-none/release/SignalX_market_contract.wasm
 build:
 	stellar contract build
 	@echo "WASM artifact:"
@@ -115,8 +115,8 @@ verify:
 NETWORK ?= local
 RPC_URL ?= http://localhost:8000/soroban/rpc
 NETWORK_PASSPHRASE ?= "Standalone Network ; February 2017"
-IDENTITY ?= vatix-localnet-admin
-WASM ?= target/wasm32v1-none/release/vatix_market_contract.wasm
+IDENTITY ?= SignalX-localnet-admin
+WASM ?= target/wasm32v1-none/release/SignalX_market_contract.wasm
 
 # Start a local Soroban network and create a funded deploy identity.
 # Fails closed: if the network cannot be started, the target aborts.

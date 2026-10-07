@@ -12,8 +12,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Vatix Markets",
-  description: "Prediction markets on Stellar — Vatix Protocol",
+  title: "SignalX Markets",
+  description: "Prediction markets on Stellar — SignalX Protocol",
 };
 
 export default function RootLayout({

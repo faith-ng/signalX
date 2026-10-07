@@ -10,9 +10,9 @@ use soroban_sdk::{
     token::{Client as TokenClient, StellarAssetClient},
     Address, BytesN, Env, String,
 };
-use vatix_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
-use vatix_resolution_contract::{ResolutionContract, ResolutionContractClient};
-use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+use SignalX_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
+use SignalX_resolution_contract::{ResolutionContract, ResolutionContractClient};
+use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
 const STROOPS: i128 = 10_000_000;
 
@@ -186,7 +186,7 @@ fn market_cancel_and_reclaim_collateral() {
 
 #[test]
 fn market_resolve_market_sets_resolved_status() {
-    use vatix_market_contract::types::MarketStatus;
+    use SignalX_market_contract::types::MarketStatus;
 
     let env = Env::default();
     env.mock_all_auths();
@@ -380,7 +380,7 @@ fn market_set_and_get_threshold_signers() {
         .propose_threshold_signers(&admin, &signers, &1u32)
         .unwrap();
     env.ledger()
-        .set_timestamp(env.ledger().timestamp() + vatix_market_contract::FEE_RATE_TIMELOCK_SECONDS);
+        .set_timestamp(env.ledger().timestamp() + SignalX_market_contract::FEE_RATE_TIMELOCK_SECONDS);
     client.execute_threshold_signers().unwrap();
 
     assert_eq!(client.get_threshold_quorum(), 1u32);
@@ -414,7 +414,7 @@ fn market_set_threshold_signers_allows_zero_quorum_regardless_of_signer_count() 
         .propose_threshold_signers(&admin, &soroban_sdk::Vec::new(&env), &0u32)
         .unwrap();
     env.ledger()
-        .set_timestamp(env.ledger().timestamp() + vatix_market_contract::FEE_RATE_TIMELOCK_SECONDS);
+        .set_timestamp(env.ledger().timestamp() + SignalX_market_contract::FEE_RATE_TIMELOCK_SECONDS);
     client.execute_threshold_signers().unwrap();
 
     assert_eq!(client.get_threshold_quorum(), 0u32);
@@ -597,7 +597,7 @@ fn resolution_set_market_contract_updates_config() {
     assert_eq!(client.get_config().market_contract, new_market);
 }
 
-use vatix_outcome_token_contract::{
+use SignalX_outcome_token_contract::{
     types::TokenKind, OutcomeTokenContract, OutcomeTokenContractClient,
 };
 

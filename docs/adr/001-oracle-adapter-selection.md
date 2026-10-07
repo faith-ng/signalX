@@ -6,11 +6,11 @@
 
 ## Context
 
-The Vatix prediction market protocol requires a reliable and trustworthy mechanism to resolve market outcomes. Markets need to be resolved based on real-world events or data, which means the smart contract must integrate with external data sources (oracles).
+The SignalX prediction market protocol requires a reliable and trustworthy mechanism to resolve market outcomes. Markets need to be resolved based on real-world events or data, which means the smart contract must integrate with external data sources (oracles).
 
 ### Problem Statement
 
-How should the Vatix Market Contract verify and accept outcome resolutions from oracles, given that different markets may benefit from different oracle architectures?
+How should the SignalX Market Contract verify and accept outcome resolutions from oracles, given that different markets may benefit from different oracle architectures?
 
 ### Requirements
 
@@ -569,5 +569,5 @@ This ADR is accepted when:
 **Document Version:** 1.0.0  
 **Last Updated:** 2026-06-29  
 **Status:** Accepted  
-**Authors:** Vatix Protocol Team  
+**Authors:** SignalX Protocol Team  
 **Reviewers:** TBD

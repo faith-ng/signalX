@@ -1,6 +1,6 @@
 # Storage Migration Guide
 
-> **Comprehensive guide for handling storage version bumps in the Vatix Market Contract**
+> **Comprehensive guide for handling storage version bumps in the SignalX Market Contract**
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
 
 ### What is Storage Versioning?
 
-The Vatix Market Contract uses a storage versioning mechanism to ensure data integrity across contract upgrades. The `STORAGE_VERSION` constant in `src/storage.rs` acts as a compatibility lock:
+The SignalX Market Contract uses a storage versioning mechanism to ensure data integrity across contract upgrades. The `STORAGE_VERSION` constant in `src/storage.rs` acts as a compatibility lock:
 
 ```rust
 pub const STORAGE_VERSION: u32 = 4;
@@ -268,7 +268,7 @@ export TESTNET_SECRET_KEY="S..."
 
 # Deploy the new WASM
 stellar contract deploy \
-    --wasm target/wasm32v1-none/release/vatix_market_contract.wasm \
+    --wasm target/wasm32v1-none/release/SignalX_market_contract.wasm \
     --source $TESTNET_SECRET_KEY \
     --network testnet
 
@@ -402,7 +402,7 @@ If data corruption is detected:
 ## Partial Crate Rollback Guide
 
 > **Scope:** This section defines the procedure for rolling back a *subset* of
-> the `vatix-contract` crate (e.g. a single module or entrypoint) without
+> the `SignalX-contract` crate (e.g. a single module or entrypoint) without
 > reverting the entire deployment. It complements
 > [`scripts/upgrade/UPGRADE_PLAYBOOK.md`](../../scripts/upgrade/UPGRADE_PLAYBOOK.md),
 > which covers full-crate upgrades. Read both before executing a partial

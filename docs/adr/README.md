@@ -1,6 +1,6 @@
 # Architecture Decision Records (ADRs)
 
-This directory contains Architecture Decision Records (ADRs) for the Vatix Protocol smart contract system.
+This directory contains Architecture Decision Records (ADRs) for the SignalX Protocol smart contract system.
 
 ## What is an ADR?
 

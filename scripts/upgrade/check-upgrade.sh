@@ -3,7 +3,7 @@
 # check-upgrade.sh — cross-contract upgrade dry-run (issue #664).
 #
 # One scripted entry point an operator (or CI) can run to get a pass/fail
-# verdict before rolling an upgrade out to the four Vatix contracts (market,
+# verdict before rolling an upgrade out to the four SignalX contracts (market,
 # treasury, resolution, outcome-token). It runs three phases:
 #
 #   Phase A — Storage-version drift check (always runs, no external tools
@@ -190,10 +190,10 @@ else
     ok "${crate}: version-guard tests passed"
   }
 
-  run_version_tests "vatix-market-contract"
-  run_version_tests "vatix-treasury-contract"
-  run_version_tests "vatix-resolution-contract"
-  run_version_tests "vatix-outcome-token-contract"
+  run_version_tests "SignalX-market-contract"
+  run_version_tests "SignalX-treasury-contract"
+  run_version_tests "SignalX-resolution-contract"
+  run_version_tests "SignalX-outcome-token-contract"
 fi
 
 # ── Summary ──────────────────────────────────────────────────────────────────

@@ -292,7 +292,7 @@ pub fn validate_fee_rate_bps(fee_rate_bps: i128) -> Result<(), ContractError> {
 
 /// Validates that outcome_count is exactly 2 (binary YES/NO market).
 ///
-/// All Vatix markets are binary. This is enforced at creation and re-checked
+/// All SignalX markets are binary. This is enforced at creation and re-checked
 /// on every write so the field cannot be silently mutated by callers.
 ///
 /// # Errors

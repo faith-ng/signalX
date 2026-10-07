@@ -1,5 +1,5 @@
 [package]
-name = "vatix-outcome-token-contract"
+name = "SignalX-outcome-token-contract"
 version = "0.0.0"
 edition = "2021"
 publish = false

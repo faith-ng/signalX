@@ -2,7 +2,7 @@
 #
 # check-market-wasm-size.sh — #734 wasm32 size budget for the market crate.
 #
-# Builds vatix-market-contract twice:
+# Builds SignalX-market-contract twice:
 #   1) default features
 #   2) --features oracle-adapter
 # and fails if either optimized wasm exceeds MARKET_WASM32_SIZE_BUDGET (64 KiB).
@@ -20,7 +20,7 @@ MANIFEST="contracts/market/Cargo.toml"
 # Canonical artefact path documented by contracts/market/Makefile.
 # Do not glob or fall back to an unrelated *.wasm — that can size the wrong
 # binary and let an oversized market contract pass CI (#734 review).
-CANONICAL_WASM="target/wasm32v1-none/release/vatix_market_contract.wasm"
+CANONICAL_WASM="target/wasm32v1-none/release/SignalX_market_contract.wasm"
 
 log() { printf '[wasm-budget] %s\n' "$*" >&2; }
 

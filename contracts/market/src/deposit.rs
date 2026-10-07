@@ -1,4 +1,4 @@
-//! Deposit collateral implementation for Vatix prediction markets
+//! Deposit collateral implementation for SignalX prediction markets
 //!
 //! This module handles USDC deposits into prediction markets.
 //! Users deposit collateral which can then be used to buy YES/NO shares.

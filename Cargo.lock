@@ -1975,21 +1975,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
 
 [[package]]
-name = "vatix-contract-tests"
+name = "SignalX-contract-tests"
 version = "0.0.0"
 dependencies = [
  "ed25519-dalek",
  "proptest",
  "rand 0.8.5",
  "soroban-sdk",
- "vatix-market-contract",
- "vatix-outcome-token-contract",
- "vatix-resolution-contract",
- "vatix-treasury-contract",
+ "SignalX-market-contract",
+ "SignalX-outcome-token-contract",
+ "SignalX-resolution-contract",
+ "SignalX-treasury-contract",
 ]
 
 [[package]]
-name = "vatix-market-contract"
+name = "SignalX-market-contract"
 version = "0.0.0"
 dependencies = [
  "ed25519-dalek",
@@ -1998,20 +1998,20 @@ dependencies = [
  "serde",
  "serde_json",
  "soroban-sdk",
- "vatix-outcome-token-contract",
- "vatix-resolution-contract",
- "vatix-treasury-contract",
+ "SignalX-outcome-token-contract",
+ "SignalX-resolution-contract",
+ "SignalX-treasury-contract",
 ]
 
 [[package]]
-name = "vatix-outcome-token-contract"
+name = "SignalX-outcome-token-contract"
 version = "0.0.0"
 dependencies = [
  "soroban-sdk",
 ]
 
 [[package]]
-name = "vatix-resolution-contract"
+name = "SignalX-resolution-contract"
 version = "0.0.0"
 dependencies = [
  "proptest",
@@ -2019,7 +2019,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "vatix-treasury-contract"
+name = "SignalX-treasury-contract"
 version = "0.0.0"
 dependencies = [
  "proptest",

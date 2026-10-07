@@ -26,7 +26,7 @@ use soroban_sdk::{
     token::{Client as TokenClient, StellarAssetClient},
     Address, Env,
 };
-use vatix_market_contract::{
+use SignalX_market_contract::{
     error::ContractError, storage, types::MarketStatus, MarketContract, MarketContractClient,
 };
 

@@ -1,4 +1,4 @@
-# Authorization Table — Vatix Market Contract
+# Authorization Table — SignalX Market Contract
 
 This document is the source of truth for **who may call which privileged surface** in
 `contracts/market`. It exists so that Stellar Wave contributors, integrators, and

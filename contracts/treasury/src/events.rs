@@ -1,4 +1,4 @@
-//! Event emission helpers for the Vatix Treasury contract.
+//! Event emission helpers for the SignalX Treasury contract.
 //!
 //! # Index-friendly topic naming (Issue #389)
 //!

@@ -1,6 +1,6 @@
 use soroban_sdk::{contracttype, Address, BytesN, String};
 
-/// Local mirror of `vatix_market::types::MarketStatus` (Issue #497).
+/// Local mirror of `SignalX_market::types::MarketStatus` (Issue #497).
 ///
 /// The resolution crate cannot depend on the market crate directly (the
 /// market crate already depends on this one), so this enum must be kept in

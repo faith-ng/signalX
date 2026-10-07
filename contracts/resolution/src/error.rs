@@ -44,7 +44,7 @@ pub enum ContractError {
     AlreadyInitialized = 42,
     /// `initialize` was called with a contract address as admin.
     /// Admin must be a user account (Ed25519 key), not a deployed contract.
-    /// Mirrors `vatix_market_contract::ContractError::InvalidAdmin`.
+    /// Mirrors `SignalX_market_contract::ContractError::InvalidAdmin`.
     InvalidAdmin = 43,
     /// The operation is blocked by the current emergency mode (Issue #662).
     /// Check [`crate::storage::get_emergency_mode`] for the active mode.
@@ -53,8 +53,8 @@ pub enum ContractError {
     ContractPaused = 52,
     /// The on-chain storage schema version does not match the version this
     /// contract build expects (Issue #696). Mirrors
-    /// `vatix_market_contract::ContractError::UpgradeRequired` /
-    /// `vatix_treasury_contract::TreasuryError::UpgradeRequired` — a partial
+    /// `SignalX_market_contract::ContractError::UpgradeRequired` /
+    /// `SignalX_treasury_contract::TreasuryError::UpgradeRequired` — a partial
     /// cross-contract upgrade that leaves this deployment's storage on a
     /// stale schema fails closed here instead of silently corrupting state
     /// (e.g. via `finalize`).

@@ -4,7 +4,7 @@
 
 //! # Resolution Contract
 //!
-//! Provides a challenge-based resolution lifecycle for Vatix prediction markets.
+//! Provides a challenge-based resolution lifecycle for SignalX prediction markets.
 //! Proposers submit signed oracle outcomes; challengers can dispute them within
 //! a configurable window; after the window closes an unchallenged candidate can
 //! be finalized, which triggers `resolve_market` on the registered market
@@ -90,7 +90,7 @@ pub const MIN_CHALLENGE_BOND_AMOUNT: i128 = 10_000_000;
 /// Delay, in seconds, that must elapse after a candidate's last challenge
 /// deadline before admin arbitration (`arbitrate_uphold_proposer`) or
 /// voiding (`void_market`) may be executed. Mirrors
-/// `vatix_market_contract::FEE_RATE_TIMELOCK_SECONDS`: it gives the
+/// `SignalX_market_contract::FEE_RATE_TIMELOCK_SECONDS`: it gives the
 /// community a public window to react before an admin can unilaterally
 /// settle a maximally-appealed dispute.
 const ARBITRATION_TIMELOCK_SECONDS: u64 = 172_800;
@@ -121,7 +121,7 @@ impl ResolutionContract {
     ) -> Result<(), ContractError> {
         // Reject contract addresses as admin: a contract admin can be called
         // without a real key owner's consent, which would allow privilege
-        // escalation. Mirrors the check in `vatix_market_contract::initialize`.
+        // escalation. Mirrors the check in `SignalX_market_contract::initialize`.
         if admin.executable().is_some() {
             return Err(ContractError::InvalidAdmin);
         }
@@ -1187,40 +1187,6 @@ fn require_admin(admin: &Address, config: &ResolutionConfig) -> Result<(), Contr
     Ok(())
 }
 
-fn invoke_resolve_market(env: &Env, config: &ResolutionConfig, candidate: &ResolutionCandidate) {
-    if candidate.passphrase_hash.is_some() {
-        let args: Vec<Val> = soroban_sdk::vec![
-            env,
-            env.current_contract_address().into_val(env),
-            market_id_to_string(env, candidate.market_id).into_val(env),
-            candidate.outcome.into_val(env),
-            candidate.signature_expiry.into_val(env),
-            candidate.epoch.into_val(env),
-            candidate.signature.clone().into_val(env),
-            candidate.passphrase_hash.clone().unwrap().into_val(env),
-        ];
-        let _: () = env.invoke_contract(
-            &config.market_contract,
-            &Symbol::new(env, "resolve_market_v2"),
-            args,
-        );
-        return;
-    }
-
-    let args: Vec<Val> = soroban_sdk::vec![
-        env,
-        env.current_contract_address().into_val(env),
-        market_id_to_string(env, candidate.market_id).into_val(env),
-        candidate.outcome.into_val(env),
-        candidate.signature.clone().into_val(env),
-        candidate.signature_expiry.into_val(env),
-    ];
-    let _: () = env.invoke_contract(
-        &config.market_contract,
-        &Symbol::new(env, "resolve_market"),
-        args,
-    );
-}
 
 /// Guard: reject state-mutating operations when the contract is paused.
 ///

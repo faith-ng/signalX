@@ -1,6 +1,6 @@
 # Cross-Contract Call Graph
 
-Documents every cross-contract invocation in the Vatix protocol so
+Documents every cross-contract invocation in the SignalX protocol so
 developers can reason about call chains, authorization requirements, and
 failure modes without reading all four contract sources.
 

@@ -17,7 +17,7 @@ mod helpers;
 use helpers::MarketParams;
 
 use soroban_sdk::{testutils::Address as _, token::StellarAssetClient, Address, Env};
-use vatix_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
+use SignalX_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
 
 const STROOPS_PER_USDC: i128 = 10_000_000;
 const UNKNOWN_MARKET_ID: u32 = 999_999;

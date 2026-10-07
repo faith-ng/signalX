@@ -17,7 +17,7 @@ mod helpers;
 use helpers::MarketParams;
 
 use soroban_sdk::{testutils::Address as _, token::StellarAssetClient, Address, Env};
-use vatix_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
+use SignalX_market_contract::{error::ContractError, storage, MarketContract, MarketContractClient};
 
 const STROOPS_PER_USDC: i128 = 10_000_000;
 
@@ -493,7 +493,7 @@ fn withdraw_canceled_collateral_rejected_on_active_market() {
 /// from the Canceled state and rejects the operation with the right error.
 #[test]
 fn reopen_resolved_market_returns_market_already_resolved() {
-    use vatix_market_contract::types::MarketStatus;
+    use SignalX_market_contract::types::MarketStatus;
 
     let env = Env::default();
     env.mock_all_auths();

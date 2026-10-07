@@ -1,7 +1,7 @@
 # Issue Scripts Quality Bar
 
 This directory holds the operational scripts used to triage, reproduce, and
-verify GitHub issues for the Vatix contracts. This document is the canonical
+verify GitHub issues for the SignalX contracts. This document is the canonical
 quality bar every script in `scripts/issues/` must meet before it is merged.
 
 ## Scope

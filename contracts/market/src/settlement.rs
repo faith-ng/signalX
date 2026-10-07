@@ -3,7 +3,7 @@ use crate::storage;
 use crate::types::{AdapterType, Market, MarketStatus, Position};
 use soroban_sdk::token::Client as TokenClient;
 use soroban_sdk::{Address, Env, Vec};
-use vatix_outcome_token_contract::{types::TokenKind, OutcomeTokenContractClient};
+use SignalX_outcome_token_contract::{types::TokenKind, OutcomeTokenContractClient};
 
 /// Calculate payout for a position based on market outcome
 ///
@@ -1215,7 +1215,7 @@ mod tests {
         use rand::rngs::OsRng;
         use soroban_sdk::token::StellarAssetClient;
         use soroban_sdk::String;
-        use vatix_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
+        use SignalX_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
 
         const DEPOSIT: i128 = 100_000_000;
         const SHARES: i128 = 100_000_000;
@@ -1240,7 +1240,7 @@ mod tests {
         ot_client.initialize(
             &admin,
             &contract_id,
-            &String::from_str(&env, "Vatix Outcome Token"),
+            &String::from_str(&env, "SignalX Outcome Token"),
             &String::from_str(&env, "VOT"),
         );
 
@@ -1466,7 +1466,7 @@ mod tests {
         use rand::rngs::OsRng;
         use soroban_sdk::token::StellarAssetClient;
         use soroban_sdk::String;
-        use vatix_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
+        use SignalX_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
 
         const DEPOSIT: i128 = 100_000_000;
         const SHARES: i128 = 100_000_000;
@@ -1491,7 +1491,7 @@ mod tests {
         ot_client.initialize(
             &admin,
             &contract_id,
-            &String::from_str(&env, "Vatix Outcome Token"),
+            &String::from_str(&env, "SignalX Outcome Token"),
             &String::from_str(&env, "VOT"),
         );
 

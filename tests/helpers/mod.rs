@@ -19,7 +19,7 @@ use soroban_sdk::{
     testutils::{Address as _, Events as _},
     Address, BytesN, Env, IntoVal, String,
 };
-use vatix_market_contract::{oracle, storage, MarketContract};
+use SignalX_market_contract::{oracle, storage, MarketContract};
 
 /// Stroops per USDC (1 USDC = 10^7 stroops), shared across integration tests.
 pub const STROOPS_PER_USDC: i128 = 10_000_000;

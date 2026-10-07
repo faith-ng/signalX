@@ -531,7 +531,7 @@ mod deposit_withdraw_sequences {
     use crate::MarketContractClient;
     use soroban_sdk::testutils::Ledger as _;
     use soroban_sdk::token::{Client as TokenClient, StellarAssetClient};
-    use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+    use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
     const COOLDOWN: u64 = 3_600;
     const USER_FUNDS: i128 = 1_000_000_000_000;

@@ -36,7 +36,7 @@ const MIN_STELLAR_MAJOR = 21;
 
 interface ContractConfig {
   name: string;
-  wasmStem: string; // vatix_<stem>_contract
+  wasmStem: string; // SignalX_<stem>_contract
   outputName: string;
 }
 
@@ -165,7 +165,7 @@ function buildContracts(): void {
 // ---------------------------------------------------------------------------
 
 function resolveWasmPath(contract: ContractConfig): string | null {
-  const wasmFile = join(WASM_TARGET, `vatix_${contract.wasmStem}_contract.wasm`);
+  const wasmFile = join(WASM_TARGET, `SignalX_${contract.wasmStem}_contract.wasm`);
   if (!existsSync(wasmFile)) {
     warn(
       `WASM not found for "${contract.name}" at ${basename(wasmFile)}. Skipping.`

@@ -11,7 +11,7 @@ use soroban_sdk::{
 /// (`verify_signature`, `get_market_status`, `get_collateral_token`,
 /// `resolve_market`, `void_market`), used so these tests can exercise the
 /// resolution contract's real cross-contract calls without depending on the
-/// `vatix-market-contract` crate (the resolution crate cannot depend on it —
+/// `SignalX-market-contract` crate (the resolution crate cannot depend on it —
 /// see the module doc comment in `lib.rs`). Mirrors exactly the shape
 /// resolution's `lib.rs` currently invokes on the registered market
 /// contract, using this crate's own `types::MarketStatus`/`error::ContractError`

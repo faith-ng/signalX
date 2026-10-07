@@ -29,7 +29,7 @@ set -euo pipefail
 
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly CHECKLIST="${SCRIPT_DIR}/STAGING_DRY_RUN_CHECKLIST.md"
-readonly LOCK_DIR="${TMPDIR:-/tmp}/vatix-staging-dry-run.lock"
+readonly LOCK_DIR="${TMPDIR:-/tmp}/SignalX-staging-dry-run.lock"
 
 # --- stable error codes -----------------------------------------------------
 readonly E_USAGE=2
@@ -39,7 +39,7 @@ readonly E_DEPENDENCY=5
 readonly E_CHECK_FAILED=6
 
 # --- correlation id ---------------------------------------------------------
-RUN_ID="${VATIX_RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)-$$}"
+RUN_ID="${SIGNALX_RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)-$$}"
 NETWORK="testnet"
 
 log()  { printf '[staging-dry-run][%s] %s\n' "$RUN_ID" "$*"; }
@@ -83,12 +83,12 @@ if [[ "$NETWORK" == "mainnet" ]]; then
 fi
 
 # --- authz: require an admin/operator role ----------------------------------
-if [[ -z "${VATIX_ADMIN_ROLE:-}" ]]; then
-  fail "$E_AUTHZ" "missing VATIX_ADMIN_ROLE; deny-by-default for privileged dry-run"
+if [[ -z "${SIGNALX_ADMIN_ROLE:-}" ]]; then
+  fail "$E_AUTHZ" "missing SIGNALX_ADMIN_ROLE; deny-by-default for privileged dry-run"
 fi
-case "${VATIX_ADMIN_ROLE}" in
+case "${SIGNALX_ADMIN_ROLE}" in
   admin|operator|release-manager) ;;
-  *) fail "$E_AUTHZ" "role '${VATIX_ADMIN_ROLE}' is not authorized for staging dry-run" ;;
+  *) fail "$E_AUTHZ" "role '${SIGNALX_ADMIN_ROLE}' is not authorized for staging dry-run" ;;
 esac
 
 # --- idempotency: single-flight lock ----------------------------------------
@@ -116,7 +116,7 @@ probe_dependency() {
   return 0
 }
 
-if ! probe_dependency "RPC" "${VATIX_RPC_HEALTH_URL:-}"; then
+if ! probe_dependency "RPC" "${SIGNALX_RPC_HEALTH_URL:-}"; then
   fail "$E_DEPENDENCY" "RPC dependency outage; refusing to run state-affecting steps"
 fi
 

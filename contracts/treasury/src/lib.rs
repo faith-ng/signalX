@@ -4,7 +4,7 @@
 
 //! # Treasury Contract
 //!
-//! Collects and custodies protocol fees on behalf of the Vatix prediction
+//! Collects and custodies protocol fees on behalf of the SignalX prediction
 //! market protocol. Any address in the authorized market registry may deposit
 //! fees via [`TreasuryContract::collect_fee`]; the **admin** controls all
 //! other privileged operations (withdrawal, registry management).

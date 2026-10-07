@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# testnet-smoke.sh — read-only smoke test against the four Vatix contracts
+# testnet-smoke.sh — read-only smoke test against the four SignalX contracts
 # (Market, Treasury, Resolution, Outcome Token) already deployed on Stellar
 # testnet.
 #

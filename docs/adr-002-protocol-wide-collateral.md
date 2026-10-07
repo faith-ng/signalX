@@ -2,7 +2,7 @@
 
 **Status:** Proposed (Phase 1 implemented)
 **Date:** 2026-08-25
-**Issue:** [#685](https://github.com/Vatix-Protocol/vatix-contract/issues/685)
+**Issue:** [#685](https://github.com/SignalX-Protocol/SignalX-contract/issues/685)
 
 ---
 

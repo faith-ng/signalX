@@ -90,7 +90,7 @@ Web callers must not drift from on-chain signatures. The following invariants ar
 enforced by `scripts/generate-bindings.ts` and verified in CI:
 
 1. **Signature parity** — every exported entrypoint in `index.ts` maps 1:1 to a
-   `vatix-contract` entrypoint. Missing or extra exports fail the sync check.
+   `SignalX-contract` entrypoint. Missing or extra exports fail the sync check.
 2. **Stable error codes** — contract call failures surface typed error codes
    aligned with `apps/web/lib/errors.ts`. Do not introduce ad-hoc string errors.
 3. **Correlation ids** — every money-path call (deposit, withdraw, swap,
@@ -114,7 +114,7 @@ pnpm --filter web check:bindings
 ```
 
 CI runs the same check as a required gate. A drift failure means the generated
-bindings no longer match the current `vatix-contract` entrypoints — regenerate
+bindings no longer match the current `SignalX-contract` entrypoints — regenerate
 with `pnpm build:bindings` and re-run the check.
 
 ### Observability

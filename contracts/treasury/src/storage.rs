@@ -1,4 +1,4 @@
-//! Persistent storage helpers for the Vatix Treasury contract.
+//! Persistent storage helpers for the SignalX Treasury contract.
 
 use crate::error::TreasuryError;
 use soroban_sdk::{contracttype, Address, Env, Vec};

@@ -1,7 +1,7 @@
 # Contract Events Reference
 
 > **Update this table whenever `events.rs` files change.** This is the
-> canonical reference for off-chain indexers consuming Vatix contract
+> canonical reference for off-chain indexers consuming SignalX contract
 > events — keep it in sync with `contracts/*/src/events.rs` whenever an
 > event's fields, topics, or emission site change.
 

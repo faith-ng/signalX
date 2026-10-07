@@ -4,7 +4,7 @@
  */
 
 /**
- * Numeric discriminant -> human-readable copy for `vatix-market-contract`'s
+ * Numeric discriminant -> human-readable copy for `SignalX-market-contract`'s
  * `ContractError` enum (see `contracts/market/src/error.rs`). Keep this in
  * sync with that enum's discriminants; the numbers are stable ABI so a drift
  * here just means a worse error message, not a broken build.

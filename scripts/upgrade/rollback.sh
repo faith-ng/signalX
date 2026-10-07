@@ -3,7 +3,7 @@
 # rollback.sh — re-point the testnet contract registry back to a previous
 # deployment recorded in git history (issue #664).
 #
-# Vatix contracts are deployed fresh on every storage-version bump — see
+# SignalX contracts are deployed fresh on every storage-version bump — see
 # contracts/market/STORAGE_MIGRATION_GUIDE.md ("Fresh deployment required.
 # No data migration available."). There is no in-place WASM upgrade path, so
 # "rollback" means: stop routing traffic (frontend/services/scripts) at the

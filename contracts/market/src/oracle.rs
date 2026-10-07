@@ -3,7 +3,7 @@
 // replaced with a decentralised oracle integration (e.g. a Reflector or
 // Pyth price-feed adapter) so that market resolution does not rely on a
 // single off-chain signer. Tracked in:
-// https://github.com/Vatix-Protocol/vatix-contract/issues/139
+// https://github.com/SignalX-Protocol/SignalX-contract/issues/139
 //
 // CRITICAL SAFETY NOTE (Upgrade Order):
 // Oracle adapters MUST be registered in this order across the protocol:
@@ -27,7 +27,7 @@
 //!
 //! | Field                     | Encoding                          | Width   |
 //! |---------------------------|-----------------------------------|---------|
-//! | `domain_separator`        | ASCII `"VATIX_ORACLE_V2"`         | 15 bytes|
+//! | `domain_separator`        | ASCII `"SIGNALX_ORACLE_V2"`         | 15 bytes|
 //! | `network_passphrase_hash` | `[u8; 32]` network identifier     | 32 bytes|
 //! | `market_id_be`            | `u32` as **big-endian** bytes     | 4 bytes |
 //! | `outcome_byte`            | `0x01` = YES / `0x00` = NO        | 1 byte  |
@@ -36,7 +36,7 @@
 //!
 //! The V2 preimage is always exactly [`ORACLE_PREIMAGE_LEN_V2`] bytes (64 bytes).
 //!
-//! **Backend alignment**: the backend signer MUST prepend `VATIX_ORACLE_V2`,
+//! **Backend alignment**: the backend signer MUST prepend `SIGNALX_ORACLE_V2`,
 //! concatenate all fields in sequence, and keccak256-hash the result.
 //! `network_passphrase_hash` MUST be the target network's id
 //! (SHA-256 of its passphrase, `env.ledger().network_id()` on-chain); reports
@@ -49,13 +49,13 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use soroban_sdk::{Bytes, BytesN, Env};
 
 /// Domain separator prepended to legacy V1 oracle preimages before hashing.
-pub const ORACLE_DOMAIN_SEPARATOR: &[u8] = b"VATIX_ORACLE_V1";
+pub const ORACLE_DOMAIN_SEPARATOR: &[u8] = b"SIGNALX_ORACLE_V1";
 
 /// Domain separator prepended to V2 oracle preimages before hashing.
 ///
 /// Binds a signature to *this* V2 layout (including network, valid_until expiry, and market epoch)
 /// so signatures produced for testnet or other market states cannot be replayed.
-pub const ORACLE_DOMAIN_SEPARATOR_V2: &[u8] = b"VATIX_ORACLE_V2";
+pub const ORACLE_DOMAIN_SEPARATOR_V2: &[u8] = b"SIGNALX_ORACLE_V2";
 
 /// Exact width, in bytes, of the legacy V1 oracle preimage before hashing:
 /// `domain_separator (15) || market_id_be (4) || outcome_byte (1)`.
@@ -68,7 +68,7 @@ pub const ORACLE_PREIMAGE_LEN_V2: usize = ORACLE_DOMAIN_SEPARATOR_V2.len() + 32 
 /// Construct the legacy V1 message that the oracle signs.
 ///
 /// Message format: `keccak256(domain_separator || market_id_be || outcome_byte)`
-/// - `domain_separator`: fixed ASCII tag `VATIX_ORACLE_V1`
+/// - `domain_separator`: fixed ASCII tag `SIGNALX_ORACLE_V1`
 /// - `market_id`: u32 big-endian (4 bytes)
 /// - `outcome_byte`: `0x01` = YES, `0x00` = NO
 pub fn construct_oracle_message(env: &Env, market_id: u32, outcome: bool) -> BytesN<32> {
@@ -79,7 +79,7 @@ pub fn construct_oracle_message(env: &Env, market_id: u32, outcome: bool) -> Byt
 /// Construct the V2 message that the oracle signs.
 ///
 /// Message format: `keccak256(domain_separator || network_passphrase_hash || market_id_be || outcome_byte || valid_until_be || epoch_be)`
-/// - `domain_separator`: fixed ASCII tag `VATIX_ORACLE_V2` (15 bytes)
+/// - `domain_separator`: fixed ASCII tag `SIGNALX_ORACLE_V2` (15 bytes)
 /// - `network_passphrase_hash`: 32 bytes SHA-256 / Keccak-256 hash of network passphrase (or network_id)
 /// - `market_id`: u32 big-endian (4 bytes)
 /// - `outcome_byte`: `0x01` = YES, `0x00` = NO (1 byte)
@@ -1117,7 +1117,7 @@ mod tests {
             concat!(
                 "{{\n",
                 "  \"description\": \"Canonical oracle message V2: keccak256(domain_separator || network_passphrase_hash || market_id_be || outcome_byte || valid_until_be || epoch_be)\",\n",
-                "  \"domain_separator\": \"VATIX_ORACLE_V2\",\n",
+                "  \"domain_separator\": \"SIGNALX_ORACLE_V2\",\n",
                 "  \"network_passphrase_hash_hex\": \"{passphrase_hex}\",\n",
                 "  \"market_id\": {market_id},\n",
                 "  \"outcome\": \"YES\",\n",

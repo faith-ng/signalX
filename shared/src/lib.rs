@@ -1,4 +1,4 @@
-//! Placeholder for code shared across the Vatix contract workspace.
+//! Placeholder for code shared across the SignalX contract workspace.
 //!
 //! This crate currently ships no functionality — it is not a workspace
 //! member (see the root `Cargo.toml`) and nothing in `contracts/*` depends

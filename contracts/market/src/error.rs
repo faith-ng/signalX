@@ -1,6 +1,6 @@
 use soroban_sdk::contracterror;
 
-/// Error codes for the Vatix market contract.
+/// Error codes for the SignalX market contract.
 ///
 /// Errors are grouped by category with reserved number ranges:
 /// - Market Errors: 1-9
@@ -27,7 +27,7 @@ use soroban_sdk::contracterror;
 ///
 /// # Example
 /// ```ignore
-/// use vatix_market::error::ContractError;
+/// use SignalX_market::error::ContractError;
 ///
 /// // Check for specific error
 /// match result {

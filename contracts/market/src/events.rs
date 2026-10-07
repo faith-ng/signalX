@@ -1,4 +1,4 @@
-//! Event emission functions for the Vatix prediction market contract
+//! Event emission functions for the SignalX prediction market contract
 //!
 //! # Index-friendly topic naming (Issue #389)
 //!

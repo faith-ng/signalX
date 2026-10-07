@@ -1,6 +1,6 @@
 use soroban_sdk::contracterror;
 
-/// Error codes for the Vatix Treasury contract.
+/// Error codes for the SignalX Treasury contract.
 ///
 /// Ranges:
 /// - Initialization errors: 1–9  (NotInitialized=2, AlreadyInitialized=42 legacy alias)
@@ -50,7 +50,7 @@ pub enum TreasuryError {
 
     /// `initialize` was called with a contract address as admin.
     /// Admin must be a user account (Ed25519 key), not a deployed contract.
-    /// Mirrors `vatix_market_contract::ContractError::InvalidAdmin`.
+    /// Mirrors `SignalX_market_contract::ContractError::InvalidAdmin`.
     InvalidAdmin = 43,
 
     /// `initialize` has already been called.

@@ -277,8 +277,8 @@ function buildBuckets(
 
 const REPOS: RepoConfig[] = [
   {
-    slug: "vatix-contract",
-    github: "Vatix-Protocol/vatix-contract",
+    slug: "SignalX-contract",
+    github: "SignalX-Protocol/SignalX-contract",
     buckets: [
       buildBuckets("web", "frontend", 60, WEB_TASKS),
       buildBuckets("contract", "contracts", 40, CONTRACT_TASKS),
@@ -286,8 +286,8 @@ const REPOS: RepoConfig[] = [
     ],
   },
   {
-    slug: "vatix-backend",
-    github: "Vatix-Protocol/vatix-backend",
+    slug: "SignalX-backend",
+    github: "SignalX-Protocol/SignalX-backend",
     buckets: [
       buildBuckets("api", "api", 55, BACKEND_TASKS),
       buildBuckets("indexer", "indexer", 20, BACKEND_TASKS),
@@ -298,7 +298,7 @@ const REPOS: RepoConfig[] = [
   },
   {
     slug: "swyft",
-    github: "Vatix-Protocol/Swyft",
+    github: "SignalX-Protocol/Swyft",
     buckets: [
       buildBuckets("swyftWeb", "frontend", 45, SWYFT_TASKS),
       buildBuckets("swyftApi", "api", 45, SWYFT_TASKS),
@@ -571,7 +571,7 @@ function printHelp() {
 Options:
   --publish       Create issues on GitHub (requires gh auth)
   --extra N       Create N additional unique "topup" issues
-  --repo <slug>   Only vatix-contract | vatix-backend | swyft
+  --repo <slug>   Only SignalX-contract | SignalX-backend | swyft
   --delay-ms N    Delay between gh calls (default 300)
   --dry-run       Print 3 sample issues per repo, no files
   --help          Show this help

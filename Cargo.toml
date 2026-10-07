@@ -32,7 +32,7 @@ rand_chacha = "=0.3.1"
 # The workspace root doubles as a package whose only purpose is to host the
 # end-to-end integration tests under `tests/`. It ships no library code.
 [package]
-name = "vatix-contract-tests"
+name = "SignalX-contract-tests"
 version = "0.0.0"
 edition = "2021"
 publish = false
@@ -42,10 +42,10 @@ path = "src/lib.rs"
 doctest = false
 
 [dev-dependencies]
-vatix-market-contract = { path = "contracts/market" }
-vatix-treasury-contract = { path = "contracts/treasury" }
-vatix-outcome-token-contract = { path = "contracts/outcome-token" }
-vatix-resolution-contract = { path = "contracts/resolution" }
+SignalX-market-contract = { path = "contracts/market" }
+SignalX-treasury-contract = { path = "contracts/treasury" }
+SignalX-outcome-token-contract = { path = "contracts/outcome-token" }
+SignalX-resolution-contract = { path = "contracts/resolution" }
 soroban-sdk = { workspace = true, features = ["testutils"] }
 ed25519-dalek = { workspace = true }
 rand = "0.8"

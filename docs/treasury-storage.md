@@ -60,7 +60,7 @@ stored type:
       tables alone would not have caught it, because both tables were
       *also* missing it — the drift was between code-that-compiles and
       code-that-doesn't, not between two prose descriptions. A working
-      compiler catches this immediately (`cargo check -p vatix-treasury-contract`
+      compiler catches this immediately (`cargo check -p SignalX-treasury-contract`
       fails with "no variant named `EmergencyMode`"), but only if CI is
       actually gating merges on it — see the note below.
 - [ ] **List every row in both doc tables** (`src/lib.rs`'s `## Storage
@@ -76,7 +76,7 @@ stored type:
       confirm that key actually exists in the enum — `#722`'s v3 entry
       described `EmergencyMode` correctly from the start; only the enum
       itself lagged behind its own changelog.
-- [ ] **Run `cargo check -p vatix-treasury-contract --all-targets` locally
+- [ ] **Run `cargo check -p SignalX-treasury-contract --all-targets` locally
       before opening the PR.** This is the actual enforcement mechanism for
       the enum-variant-must-exist class of drift; the checklist above is
       for the two prose tables, which the compiler cannot check for you.

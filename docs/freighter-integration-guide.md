@@ -1,8 +1,8 @@
 # Freighter Integration Guide
 
-This guide documents how Vatix integrates with the [Freighter](https://www.freighter.app/) Stellar wallet. It covers the real integration surface used by the web app, the invariants that keep the protocol safe, and the failure modes contributors must handle.
+This guide documents how SignalX integrates with the [Freighter](https://www.freighter.app/) Stellar wallet. It covers the real integration surface used by the web app, the invariants that keep the protocol safe, and the failure modes contributors must handle.
 
-> **Source of truth:** the Vatix server and on-chain contracts are authoritative for balances, swaps, and admin actions. Client-side wallet state (connected address, selected network, cached balances) is **never** authoritative and must not be trusted for policy decisions.
+> **Source of truth:** the SignalX server and on-chain contracts are authoritative for balances, swaps, and admin actions. Client-side wallet state (connected address, selected network, cached balances) is **never** authoritative and must not be trusted for policy decisions.
 
 ## Integration surface
 

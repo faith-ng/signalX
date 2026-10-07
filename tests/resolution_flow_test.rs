@@ -38,10 +38,10 @@ use soroban_sdk::{
     token::StellarAssetClient,
     Address, BytesN, Env, String,
 };
-use vatix_market_contract::{
+use SignalX_market_contract::{
     storage as market_storage, types::MarketStatus, MarketContract, MarketContractClient,
 };
-use vatix_resolution_contract::{
+use SignalX_resolution_contract::{
     types::CandidateStatus, ResolutionContract, ResolutionContractClient,
 };
 
@@ -70,7 +70,7 @@ fn oracle_keypair(env: &Env) -> (BytesN<32>, SigningKey) {
 /// Sign `(market_id, outcome)` with the oracle key and return the 64-byte
 /// signature the market contract will accept via `verify_signature`.
 fn oracle_sign(env: &Env, key: &SigningKey, market_id: u32, outcome: bool) -> BytesN<64> {
-    let message = vatix_market_contract::oracle::construct_oracle_message(env, market_id, outcome);
+    let message = SignalX_market_contract::oracle::construct_oracle_message(env, market_id, outcome);
     let sig = key.sign(message.to_array().as_slice());
     BytesN::from_array(env, &sig.to_bytes())
 }

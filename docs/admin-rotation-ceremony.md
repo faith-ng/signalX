@@ -1,6 +1,6 @@
 # Admin Rotation Ceremony
 
-Runbook for rotating the admin key of the Vatix contracts (#913). The
+Runbook for rotating the admin key of the SignalX contracts (#913). The
 entrypoints and their auth checks are inventoried in
 [`AUTH_TABLE.md`](../AUTH_TABLE.md); this document is the operational
 procedure around them. Security disclosures go through

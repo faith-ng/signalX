@@ -2,7 +2,7 @@
 
 - **Status:** Accepted
 - **Issue:** #946 (Oracle collusion assumptions documented)
-- **Scope:** `vatix-contract` oracle adapter used by `contracts/market` and
+- **Scope:** `SignalX-contract` oracle adapter used by `contracts/market` and
   `contracts/resolution` for price/outcome resolution.
 
 ## Context

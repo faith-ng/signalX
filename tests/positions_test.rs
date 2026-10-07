@@ -6,7 +6,7 @@ mod helpers;
 use helpers::{assert_event_emitted, MarketParams};
 
 use soroban_sdk::{testutils::Address as _, token::StellarAssetClient, Address, Env};
-use vatix_market_contract::{storage, MarketContract, MarketContractClient};
+use SignalX_market_contract::{storage, MarketContract, MarketContractClient};
 
 const STROOPS_PER_USDC: i128 = 10_000_000;
 
@@ -258,7 +258,7 @@ fn get_market_returns_correct_data() {
     assert_eq!(market.id, market_id);
     assert_eq!(
         market.status,
-        vatix_market_contract::types::MarketStatus::Active
+        SignalX_market_contract::types::MarketStatus::Active
     );
     assert_eq!(market.price_bps, 5_000); // Default initial price
     assert!(market.result.is_none()); // Not resolved yet

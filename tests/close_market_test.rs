@@ -24,7 +24,7 @@ mod helpers;
 use helpers::{assert_event_emitted, MarketParams};
 
 use soroban_sdk::{testutils::Address as _, token::StellarAssetClient, Address, Env};
-use vatix_market_contract::{storage, MarketContract, MarketContractClient};
+use SignalX_market_contract::{storage, MarketContract, MarketContractClient};
 
 const STROOPS_PER_USDC: i128 = 10_000_000;
 
@@ -205,7 +205,7 @@ fn oracle_keypair_for(
 ) -> (soroban_sdk::BytesN<32>, soroban_sdk::BytesN<64>) {
     use ed25519_dalek::{Signer, SigningKey};
     use rand::rngs::OsRng;
-    use vatix_market_contract::oracle;
+    use SignalX_market_contract::oracle;
 
     let signing_key = SigningKey::generate(&mut OsRng);
     let pubkey = soroban_sdk::BytesN::from_array(env, &signing_key.verifying_key().to_bytes());

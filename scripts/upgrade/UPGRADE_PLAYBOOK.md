@@ -1,6 +1,6 @@
-# Vatix Protocol Upgrade Playbook
+# SignalX Protocol Upgrade Playbook
 
-This document defines the strict order and preconditions for cross-contract upgrades in the Vatix protocol.
+This document defines the strict order and preconditions for cross-contract upgrades in the SignalX protocol.
 
 ## Critical Safety Requirement: Upgrade Order
 
@@ -277,10 +277,10 @@ rollback requires the readiness checklist and audit sign-off above.
 - Storage version CI check: [contracts/market/STORAGE_VERSION_CI_CHECK.md](../../contracts/market/STORAGE_VERSION_CI_CHECK.md)
 - Migration notes: [MIGRATION.md](../../MIGRATION.md)
 - Fail-closed security model: [docs/SECURITY.md](../../docs/SECURITY.md)
-- Issue tracking: [#139 - Decentralized Oracle Integration](https://github.com/Vatix-Protocol/vatix-contract/issues/139)
+- Issue tracking: [#139 - Decentralized Oracle Integration](https://github.com/SignalX-Protocol/SignalX-contract/issues/139)
 # Cross-Contract Upgrade Playbook
 
-> **Executable upgrade safety net for the four interdependent Vatix contracts
+> **Executable upgrade safety net for the four interdependent SignalX contracts
 > (Market, Treasury, Resolution, Outcome Token).** Complements — does not
 > replace — the single-contract guides:
 > [`contracts/market/STORAGE_MIGRATION_GUIDE.md`](../../contracts/market/STORAGE_MIGRATION_GUIDE.md).

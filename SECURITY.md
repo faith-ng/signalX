@@ -18,7 +18,7 @@ Security fixes are provided for the following versions:
 
 ## Scope
 
-This policy covers the Vatix-Protocol monorepo, including `vatix-contract` (Soroban contracts), the market/settlement paths, and the operational tooling under `scripts/`.
+This policy covers the SignalX-Protocol monorepo, including `SignalX-contract` (Soroban contracts), the market/settlement paths, and the operational tooling under `scripts/`.
 
 ## Hardening follow-up archives
 

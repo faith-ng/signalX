@@ -15,7 +15,7 @@ fn setup<'a>(env: &'a Env) -> (OutcomeTokenContractClient<'a>, Address, Address)
     client.initialize(
         &admin,
         &market_contract,
-        &String::from_str(env, "Vatix Outcome Token"),
+        &String::from_str(env, "SignalX Outcome Token"),
         &String::from_str(env, "vOUT"),
     );
     (client, admin, market_contract)
@@ -26,7 +26,7 @@ fn metadata_defaults_are_stable() {
     let env = Env::default();
     let (client, _admin, _market) = setup(&env);
 
-    assert_eq!(client.name(), String::from_str(&env, "Vatix Outcome Token"));
+    assert_eq!(client.name(), String::from_str(&env, "SignalX Outcome Token"));
     assert_eq!(client.symbol(), String::from_str(&env, "vOUT"));
     assert_eq!(client.decimals(), 7);
 }
@@ -38,11 +38,11 @@ fn admin_can_update_metadata() {
 
     client.set_metadata(
         &admin,
-        &String::from_str(&env, "Vatix Outcome YES"),
+        &String::from_str(&env, "SignalX Outcome YES"),
         &String::from_str(&env, "vYES"),
     );
 
-    assert_eq!(client.name(), String::from_str(&env, "Vatix Outcome YES"));
+    assert_eq!(client.name(), String::from_str(&env, "SignalX Outcome YES"));
     assert_eq!(client.symbol(), String::from_str(&env, "vYES"));
     // Decimals is a compile-time constant; it cannot be changed by
     // `set_metadata` and always reports 7 (Issue #929).
@@ -54,7 +54,7 @@ fn metadata_update_is_idempotent() {
     let env = Env::default();
     let (client, admin, _market) = setup(&env);
 
-    let name = String::from_str(&env, "Vatix Outcome YES");
+    let name = String::from_str(&env, "SignalX Outcome YES");
     let symbol = String::from_str(&env, "vYES");
 
     client.set_metadata(&admin, &name, &symbol);
@@ -132,7 +132,7 @@ fn metadata_rejects_empty_symbol() {
 
     let result = client.try_set_metadata(
         &admin,
-        &String::from_str(&env, "Vatix Outcome YES"),
+        &String::from_str(&env, "SignalX Outcome YES"),
         &String::from_str(&env, ""),
     );
     assert_eq!(result, Err(Ok(ContractError::EmptyMetadata)));
@@ -159,7 +159,7 @@ fn metadata_accepts_symbol_at_cap() {
     let (client, admin, _market) = setup(&env);
 
     // Exactly at the maximum allowed symbol length must be accepted.
-    let name = String::from_str(&env, "Vatix Outcome YES");
+    let name = String::from_str(&env, "SignalX Outcome YES");
     let symbol = String::from_str(&env, &"S".repeat(crate::MAX_SYMBOL_LEN as usize));
 
     client.set_metadata(&admin, &name, &symbol);
@@ -192,7 +192,7 @@ fn metadata_rejects_symbol_over_cap() {
     let symbol = String::from_str(&env, &"S".repeat(crate::MAX_SYMBOL_LEN as usize + 1));
     let result = client.try_set_metadata(
         &admin,
-        &String::from_str(&env, "Vatix Outcome YES"),
+        &String::from_str(&env, "SignalX Outcome YES"),
         &symbol,
     );
     assert_eq!(result, Err(Ok(ContractError::MetadataTooLong)));

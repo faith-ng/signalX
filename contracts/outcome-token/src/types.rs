@@ -7,7 +7,7 @@ pub enum TokenKind {
     No,
 }
 
-/// Local mirror of `vatix_market::types::MarketStatus`.
+/// Local mirror of `SignalX_market::types::MarketStatus`.
 ///
 /// The outcome-token contract cannot depend on the market crate directly
 /// (the market crate already depends on this one), so this enum must be kept

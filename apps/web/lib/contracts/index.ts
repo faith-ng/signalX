@@ -3,7 +3,7 @@
  *
  * Re-exports the generated Soroban contract clients and the environment
  * configuration used by web callers. Keep this surface in sync with the
- * current `vatix-contract` entrypoints — see README.md "Sync Invariants".
+ * current `SignalX-contract` entrypoints — see README.md "Sync Invariants".
  */
 
 export * from './market';

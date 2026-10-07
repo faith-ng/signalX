@@ -1,7 +1,7 @@
-# Contributing to Vatix Protocol
+# Contributing to SignalX Protocol
 
 Thanks for contributing! This guide covers the local tooling and workflow for the
-Vatix-Protocol monorepo. For security-sensitive changes, also read
+SignalX-Protocol monorepo. For security-sensitive changes, also read
 [`SECURITY.md`](./SECURITY.md).
 
 ## Prerequisites
@@ -98,13 +98,13 @@ cargo build --target wasm32-unknown-unknown --release
 ```
 
 The artifact lands at
-`target/wasm32-unknown-unknown/release/vatix_market_contract.wasm`.
+`target/wasm32-unknown-unknown/release/SignalX_market_contract.wasm`.
 
 ### 2. Deploy
 
 ```bash
 stellar contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/vatix_market_contract.wasm \
+  --wasm target/wasm32-unknown-unknown/release/SignalX_market_contract.wasm \
   --source <admin-identity> \
   --network local
 ```

@@ -13,7 +13,7 @@
 //! replays (idempotent for indexers).
 //!
 //! ```sh
-//! cargo test -p vatix-market-contract tests_event_fixtures
+//! cargo test -p SignalX-market-contract tests_event_fixtures
 //! ```
 
 use serde::Deserialize;

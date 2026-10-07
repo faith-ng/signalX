@@ -1,6 +1,6 @@
 # Outcome Token Contract
 
-Manages per-market, per-side (YES/NO) outcome tokens for the Vatix protocol.
+Manages per-market, per-side (YES/NO) outcome tokens for the SignalX protocol.
 Only the registered market contract may `mint`/`burn` tokens; balances and
 total supplies are tracked per `(market_id, user, TokenKind)`.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # scripts/upgrade-dry-run.sh
 #
-# Dry-run upgrade simulation for a Vatix Soroban contract.
+# Dry-run upgrade simulation for a SignalX Soroban contract.
 #
 # Runs all upgrade steps with --send=no (simulate-only) so no ledger state
 # is mutated. Safe to run in CI or locally against a funded testnet account.

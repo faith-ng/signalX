@@ -32,7 +32,7 @@ export default function HomePage() {
     <div className={`${containerClass()} py-10`}>
       <section className="mb-10">
         <h1 className="text-3xl font-semibold tracking-tight">
-          Vatix prediction markets
+          SignalX prediction markets
         </h1>
         <p className="mt-2 max-w-xl text-sm text-slate-600 dark:text-slate-400">
           Trade binary Yes/No outcomes on Stellar. Connect a wallet to deposit

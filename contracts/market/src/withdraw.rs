@@ -673,7 +673,7 @@ mod tests {
         use soroban_sdk::testutils::Events as _;
         use soroban_sdk::token::StellarAssetClient;
         use soroban_sdk::IntoVal;
-        use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+        use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
         let env = setup_env();
         let user = Address::generate(&env);
@@ -736,7 +736,7 @@ mod tests {
         use soroban_sdk::testutils::Events as _;
         use soroban_sdk::token::StellarAssetClient;
         use soroban_sdk::{IntoVal, Map, Symbol, TryIntoVal, Val};
-        use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+        use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
         let env = setup_env();
         let user = Address::generate(&env);
@@ -800,7 +800,7 @@ mod tests {
         use soroban_sdk::testutils::Events as _;
         use soroban_sdk::token::StellarAssetClient;
         use soroban_sdk::{IntoVal, Symbol};
-        use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+        use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
         let env = setup_env();
         let user = Address::generate(&env);

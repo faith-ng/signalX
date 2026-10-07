@@ -1,6 +1,6 @@
 # Contract Error Codes (Issue #907)
 
-Every Vatix contract returns a `#[contracterror]` enum (`#[repr(u32)]`). The numeric
+Every SignalX contract returns a `#[contracterror]` enum (`#[repr(u32)]`). The numeric
 codes below are part of the **public ABI**: clients (for example
 `apps/web/lib/errors.ts`) and indexers key off the number, not the name.
 

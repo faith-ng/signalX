@@ -26,7 +26,7 @@ Authz reference: [`AUTH_TABLE.md`](../AUTH_TABLE.md).
 | Oracle manipulation / wrong outcome | Adapter-verified signatures, challenge window | `docs/adr-001-oracle-adapter.md` |
 | Fee rounding / overflow | Floor division, `checked_mul` → `ArithmeticOverflow` | `docs/dust-handling.md` |
 | Unsafe upgrade / storage drift | Version check, ordered multi-contract upgrade, fail-closed CI | `scripts/upgrade/UPGRADE_PLAYBOOK.md` |
-| Network / address drift | Deploy scripts verify network and contract ids; mainnet gated by `VATIX_MAINNET_READY=1` | `SECURITY.md` |
+| Network / address drift | Deploy scripts verify network and contract ids; mainnet gated by `SIGNALX_MAINNET_READY=1` | `SECURITY.md` |
 | Secret leakage | No keys in repo; scripts redact env, keys and RPC URLs | `SECURITY.md` |
 
 ## Failure posture

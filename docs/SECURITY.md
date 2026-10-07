@@ -1,6 +1,6 @@
 # Security Model & Fail-Closed Oracle Adapters
 
-This document explains the security guarantees and design decisions in the Vatix market contract, with emphasis on the fail-closed oracle adapter transition.
+This document explains the security guarantees and design decisions in the SignalX market contract, with emphasis on the fail-closed oracle adapter transition.
 
 ## Executive Summary
 
@@ -280,4 +280,4 @@ Critical error codes for security:
 - Fail-closed oracle tests: [contracts/market/src/oracle.rs#L245-L269](../contracts/market/src/oracle.rs#L245-L269)
 - Authorization table: [docs/AUTH_TABLE.md](./AUTH_TABLE.md)
 - Upgrade procedure: [scripts/upgrade/UPGRADE_PLAYBOOK.md](../scripts/upgrade/UPGRADE_PLAYBOOK.md)
-- Issue tracking: [#139 - Decentralized Oracle Integration](https://github.com/Vatix-Protocol/vatix-contract/issues/139)
+- Issue tracking: [#139 - Decentralized Oracle Integration](https://github.com/SignalX-Protocol/SignalX-contract/issues/139)

@@ -40,7 +40,7 @@ use crate::events;
 use crate::storage;
 use crate::types::Position;
 use soroban_sdk::{contracttype, Address, BytesN, Env};
-use vatix_outcome_token_contract::{types::TokenKind, OutcomeTokenContractClient};
+use SignalX_outcome_token_contract::{types::TokenKind, OutcomeTokenContractClient};
 
 /// Snapshot comparing a user's `Position` shares against their `OutcomeToken`
 /// balances for the same market.
@@ -198,7 +198,7 @@ mod tests {
     use ed25519_dalek::SigningKey;
     use soroban_sdk::testutils::Address as TestAddress;
     use soroban_sdk::{token::StellarAssetClient, BytesN, String};
-    use vatix_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
+    use SignalX_outcome_token_contract::{OutcomeTokenContract, OutcomeTokenContractClient};
 
     const STROOPS_PER_USDC: i128 = 10_000_000;
 

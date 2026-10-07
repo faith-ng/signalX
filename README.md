@@ -1,10 +1,10 @@
-# Vatix Contracts
+# SignalX Contracts
 
-Soroban smart contracts for the Vatix prediction market protocol on Stellar.
+Soroban smart contracts for the SignalX prediction market protocol on Stellar.
 
 ## Overview
 
-Core smart contracts powering Vatix prediction markets, written in Rust for the Stellar Soroban platform.
+Core smart contracts powering SignalX prediction markets, written in Rust for the Stellar Soroban platform.
 
 ## Contracts
 
@@ -21,7 +21,7 @@ Each Outcome Token contract instance is initialized with SAC-compatible metadata
 
 | Field | Type | Source | Notes |
 |---|---|---|---|
-| `name` | `String` | Set at `initialize`, mutable via `set_metadata` (admin only) | Human-readable token name, e.g. `"Vatix YES Token"` |
+| `name` | `String` | Set at `initialize`, mutable via `set_metadata` (admin only) | Human-readable token name, e.g. `"SignalX YES Token"` |
 | `symbol` | `String` | Set at `initialize`, mutable via `set_metadata` (admin only) | Ticker symbol, e.g. `"vYES"` / `"vNO"` |
 | `decimals` | `u32` | Compile-time constant, not stored | Fixed at `7`, matching the Stellar Asset Contract (SAC) standard |
 
@@ -436,10 +436,10 @@ target/wasm32v1-none/release/<contract-name>.wasm
 ```
 
 Example artifacts:
-- `vatix_market_contract.wasm`
-- `vatix_treasury_contract.wasm`
-- `vatix_outcome_token_contract.wasm`
-- `vatix_resolution_contract.wasm`
+- `SignalX_market_contract.wasm`
+- `SignalX_treasury_contract.wasm`
+- `SignalX_outcome_token_contract.wasm`
+- `SignalX_resolution_contract.wasm`
 
 ### Regenerating contract bindings
 
@@ -547,7 +547,7 @@ Smart contract security is critical. All contracts will undergo:
 See [CONTRIBUTING.md](CONTRIBUTING.md) for workspace layout, Soroban contract
 patterns, and the build/lint/test commands to run before opening a PR. For
 broader project information, check out
-[vatix-docs](https://github.com/vatix-protocol/vatix-docs).
+[SignalX-docs](https://github.com/SignalX-protocol/SignalX-docs).
 
 ## License
 
@@ -555,7 +555,7 @@ MIT License
 
 ---
 
-Part of the [Vatix Protocol](https://github.com/vatix-protocol)
+Part of the [SignalX Protocol](https://github.com/SignalX-protocol)
 
 ## Handsoff notes
 

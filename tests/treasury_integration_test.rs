@@ -14,8 +14,8 @@ use soroban_sdk::{
     token::{Client as TokenClient, StellarAssetClient},
     Address, Env, IntoVal, Map, Symbol, TryIntoVal, Val,
 };
-use vatix_market_contract::{storage, MarketContract, MarketContractClient};
-use vatix_treasury_contract::{TreasuryContract, TreasuryContractClient};
+use SignalX_market_contract::{storage, MarketContract, MarketContractClient};
+use SignalX_treasury_contract::{TreasuryContract, TreasuryContractClient};
 
 const STROOPS_PER_USDC: i128 = 10_000_000;
 const FEE_BPS: i128 = 100; // 1%
